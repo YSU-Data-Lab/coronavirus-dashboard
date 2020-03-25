@@ -83,6 +83,26 @@ for item in items1:
         num_death=value
         daily['num_death']=num_death
 
+items2=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[2]')
+if items2 is not None and len(items2)>0:
+    for item in items1:
+        title=item.xpath('div[2]/text()').get().strip()
+        value=int(item.xpath('div/div/text()').get().strip())
+        print(title+': ', value)
+        # if 'cases' in title.lower():
+        #     num_cases=value
+        #     daily['num_cases']=num_cases
+        # elif 'icu' in title.lower():
+        #     num_icu=value
+        #     daily['num_icu']=num_icu
+        # elif 'hospitalizations' in title.lower():
+        #     num_hospitalizations=value
+        #     daily['num_hospitalizations']=num_hospitalizations
+        # elif 'death' in title.lower():
+        #     num_death=value
+        #     daily['num_death']=num_death
+
+
 county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[1]/div/p').getall()
 if county_cases is not None and len(county_cases)>0:
     county_cases=county_cases[0]
