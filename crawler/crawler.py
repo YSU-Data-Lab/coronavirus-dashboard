@@ -51,32 +51,37 @@ daily={}
 daily['date'] = today_date
 
 num_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[1]/div[1]/div').getall()
-num_cases=int(num_cases[0].split('\n')[1].strip())
-daily['num_cases']=num_cases
+if num_cases is not None and len(num_cases)>0:
+    num_cases=int(num_cases[0].split('\n')[1].strip())
+    daily['num_cases']=num_cases
 
 num_counties=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[2]/div[1]/div').getall()
-num_counties=int(num_counties[0].split('\n')[1].strip())
-daily['num_counties']=num_counties
+if num_counties is not None and len(num_counties)>0:
+    num_counties=int(num_counties[0].split('\n')[1].strip())
+    daily['num_counties']=num_counties
 
 num_hostiptalizations=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[3]/div[1]/div').getall()
-num_hostiptalizations=int(num_hostiptalizations[0].split('\n')[1].strip())
-daily['num_hostiptalizations']=num_hostiptalizations
+if num_hostiptalizations is not None and len(num_hostiptalizations)>0:
+    num_hostiptalizations=int(num_hostiptalizations[0].split('\n')[1].strip())
+    daily['num_hostiptalizations']=num_hostiptalizations
 
 num_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[4]/div[1]/div').getall()
-num_death=int(num_death[0].split('\n')[1].strip())
-daily['num_death']=num_death
+if num_death is not None and len(num_death)>0:
+    num_death=int(num_death[0].split('\n')[1].strip())
+    daily['num_death']=num_death
 
-county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[3]/div/div/div/div[1]/div/p').getall()
-county_cases=county_cases[0]
-county_cases=county_cases.replace('<p dir="ltr">*','')
-county_cases=county_cases.replace('</p>','')
-daily['county_cases']=county_cases.strip()
+# county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[3]/div/div/div/div[1]/div/p').getall()
+# county_cases=county_cases[0]
+# county_cases=county_cases.replace('<p dir="ltr">*','')
+# county_cases=county_cases.replace('</p>','')
+# daily['county_cases']=county_cases.strip()
 
 county_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[3]/div/div/div/div[2]/div/p').getall()
-county_death=county_death[0]
-county_death=county_death.replace('<p dir="ltr">**','')
-county_death=county_death.replace('</p>','')
-daily['county_death']=county_death.strip()
+if county_death is not None and len(county_death)>0:
+    county_death=county_death[0]
+    county_death=county_death.replace('<p dir="ltr">**','')
+    county_death=county_death.replace('</p>','')
+    daily['county_death']=county_death.strip()
 
 print(daily)
 ##===load today's data===end

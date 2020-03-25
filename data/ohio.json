@@ -53,6 +53,13 @@
             "num_death": 8,
             "county_cases": "Number of counties with cases: Ashland (1), Ashtabula (3), Belmont (2), Butler (18), Carroll (3), Champaign (1), Clark (2), Clermont (5), Clinton (1), Columbiana (3), Coshocton (3), Crawford (1), Cuyahoga (167), Darke (1), Defiance (2), Delaware (11), Erie (1), Fairfield (2), Franklin (75), Gallia (1), Geauga (5), Greene (3), Hamilton (38), Hancock (1), Highland (1), Huron (2), Knox (1), Lake (11), Licking (2), Logan (2), Lorain (30), Lucas (11), Madison (1), Mahoning (28), Marion (4), Medina (15), Miami (19), Montgomery (10), Portage (4), Richland (4), Sandusky (1), Stark (13), Summit (36), Trumbull (4), Tuscarawas (3), Union (2), Warren (7), Washington (1), Wood (2)",
             "county_death": "Cuyahoga (2), Erie (1), Franklin (2), Gallia (1), Lucas (1), Stark (1)"
+        },
+        {
+            "date": "2020-03-25",
+            "num_cases": 704,
+            "num_counties": 75,
+            "num_hostiptalizations": 182,
+            "num_death": 10
         }
     ]
 }
