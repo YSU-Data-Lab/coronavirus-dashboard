@@ -2,7 +2,7 @@
 
 <p class="figure">
 <img src="./figure/num_cases.svg" width="600px"  alt="Confirmed Cases in Ohio"/>  
-<img src="./figure/num_counties.svg" width="600px" alt="Number of Counties in Ohio"/>  
+<!-- <img src="./figure/num_counties.svg" width="600px" alt="Number of Counties in Ohio"/>   -->
 <img src="./figure/num_hospitalizations.svg" width="600px" alt="Number of Hospitalizations in Ohio"/>  
 <img src="./figure/num_death.svg" width="600px" alt="Number of Deaths"/>
 </p>
