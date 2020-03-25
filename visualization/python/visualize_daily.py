@@ -12,7 +12,8 @@ rotation_degree=90
 
 data_file_name = '../../data/ohio.json'
 num_cases_file_name='../../figure/num_cases.svg'
-num_counties_file_name='../../figure/num_counties.svg'
+# num_counties_file_name='../../figure/num_counties.svg'
+num_icu_file_name='../../figure/num_icu.svg'
 num_hospitalizations_file_name='../../figure/num_hospitalizations.svg'
 num_death_file_name='../../figure/num_death.svg'
 
@@ -52,24 +53,25 @@ plt.cla()
 plt.close()
 
 
-# x=df['date']
-# y=df['num_counties']
-# # plt.figure(figsize=(fig_width, fig_height))
-# plt.title('Number of Counties in Ohio')
-# plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2)
-# bottom, top = plt.ylim()
-# plt.ylim(0, top*1.1)
-# #plt.xlabel('Date')
-# plt.xticks(rotation=rotation_degree)
-# plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
-# for i,j in zip(x,y):
-#     # plt.annotate(str(j),xy=(i,j))
-#     plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
-# plt.tight_layout()
-# plt.savefig(num_counties_file_name)
-# plt.clf()
-# plt.cla()
-# plt.close()
+
+y=df['num_icu'].dropna() # delete NaN entries
+x=df['date'][len(df['date'])-len(y):] # subarray of dates with num_icu available
+# plt.figure(figsize=(fig_width, fig_height))
+plt.title('Number of ICU admissions')
+plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2)
+bottom, top = plt.ylim()
+plt.ylim(0, top*1.1)
+#plt.xlabel('Date')
+plt.xticks(rotation=rotation_degree)
+plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+for i,j in zip(x,y):
+    # plt.annotate(str(j),xy=(i,j))
+    plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
+plt.tight_layout()
+plt.savefig(num_icu_file_name)
+plt.clf()
+plt.cla()
+plt.close()
 
 
 x=df['date']
@@ -106,3 +108,23 @@ plt.savefig(num_death_file_name)
 plt.clf()
 plt.cla()
 plt.close()
+
+
+# x=df['date']
+# y=df['num_counties']
+# # plt.figure(figsize=(fig_width, fig_height))
+# plt.title('Number of Counties in Ohio')
+# plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2)
+# bottom, top = plt.ylim()
+# plt.ylim(0, top*1.1)
+# #plt.xlabel('Date')
+# plt.xticks(rotation=rotation_degree)
+# plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+# for i,j in zip(x,y):
+#     # plt.annotate(str(j),xy=(i,j))
+#     plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
+# plt.tight_layout()
+# plt.savefig(num_counties_file_name)
+# plt.clf()
+# plt.cla()
+# plt.close()

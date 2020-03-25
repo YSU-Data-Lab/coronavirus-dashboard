@@ -13,6 +13,8 @@ url='https://coronavirus.ohio.gov/wps/portal/gov/covid-19/'
 today_date = dt.date.today().strftime("%Y-%m-%d")
 yesterday = dt.date.today() - dt.timedelta(days=1)
 yesterday_date = yesterday.strftime("%Y-%m-%d")
+timestamp_utc=str(dt.datetime.utcnow())
+timestamp_iso=str(dt.datetime.now(dt.timezone.utc).astimezone().isoformat())
 
 stat_card_dir='../data/stat_card/'
 stat_card_file_name_today=stat_card_dir+today_date+'.html'
@@ -27,17 +29,18 @@ response = requests.get(url)
 selector = Selector(response.text)
 stat_card_today=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div').getall()[0]
 
-if os.path.exists(stat_card_file_name_today):
-    print('Crawling for today finished previously. Exit.')
-    sys.exit(1)
-elif os.path.exists(stat_card_file_name_yesterday):
+# if os.path.exists(stat_card_file_name_today):
+#     print('Crawling for today finished previously. Exit.')
+#     sys.exit(1)
+
+if os.path.exists(stat_card_file_name_yesterday):
     with open(stat_card_file_name_yesterday,'r') as stat_card_file_yesterday:
         stat_card_yesterday=stat_card_file_yesterday.read()
     if stat_card_today == stat_card_yesterday:
         print('Website not updated: ',url)
         sys.exit(1)
     else:
-        print('Website updated. Begin crawling')
+        print('Begin crawling')
 
 print('Save today\'s stat_card: ',today_date+'.html')
 with open(stat_card_file_name_today, 'w+') as stat_card_file_today:
@@ -49,16 +52,17 @@ with open(stat_card_file_name_today, 'w+') as stat_card_file_today:
 daily={}
 
 daily['date'] = today_date
+daily['timestamp_iso']=timestamp_iso
 
 num_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[1]/div[1]/div').getall()
 if num_cases is not None and len(num_cases)>0:
     num_cases=int(num_cases[0].split('\n')[1].strip())
     daily['num_cases']=num_cases
 
-# num_counties=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[2]/div[1]/div').getall()
-# if num_counties is not None and len(num_counties)>0:
-#     num_counties=int(num_counties[0].split('\n')[1].strip())
-#     daily['num_counties']=num_counties
+num_icu=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[2]/div[1]/div').getall()
+if num_icu is not None and len(num_icu)>0:
+    num_icu=int(num_icu[0].split('\n')[1].strip())
+    daily['num_icu']=num_icu
 
 num_hospitalizations=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[3]/div[1]/div').getall()
 if num_hospitalizations is not None and len(num_hospitalizations)>0:
@@ -70,13 +74,15 @@ if num_death is not None and len(num_death)>0:
     num_death=int(num_death[0].split('\n')[1].strip())
     daily['num_death']=num_death
 
-# county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[3]/div/div/div/div[1]/div/p').getall()
-# county_cases=county_cases[0]
-# county_cases=county_cases.replace('<p dir="ltr">*','')
-# county_cases=county_cases.replace('</p>','')
-# daily['county_cases']=county_cases.strip()
 
-county_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[3]/div/div/div/div[2]/div/p').getall()
+county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[1]/div/p').getall()
+if county_cases is not None and len(county_cases)>0:
+    county_cases=county_cases[0]
+    county_cases=county_cases.replace('<p dir="ltr">*','')
+    county_cases=county_cases.replace('</p>','')
+    daily['county_cases']=county_cases.strip()
+
+county_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[2]/div/p').getall()
 if county_death is not None and len(county_death)>0:
     county_death=county_death[0]
     county_death=county_death.replace('<p dir="ltr">**','')
