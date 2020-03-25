@@ -55,15 +55,15 @@ if num_cases is not None and len(num_cases)>0:
     num_cases=int(num_cases[0].split('\n')[1].strip())
     daily['num_cases']=num_cases
 
-num_counties=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[2]/div[1]/div').getall()
-if num_counties is not None and len(num_counties)>0:
-    num_counties=int(num_counties[0].split('\n')[1].strip())
-    daily['num_counties']=num_counties
+# num_counties=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[2]/div[1]/div').getall()
+# if num_counties is not None and len(num_counties)>0:
+#     num_counties=int(num_counties[0].split('\n')[1].strip())
+#     daily['num_counties']=num_counties
 
-num_hostiptalizations=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[3]/div[1]/div').getall()
-if num_hostiptalizations is not None and len(num_hostiptalizations)>0:
-    num_hostiptalizations=int(num_hostiptalizations[0].split('\n')[1].strip())
-    daily['num_hostiptalizations']=num_hostiptalizations
+num_hospitalizations=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[3]/div[1]/div').getall()
+if num_hospitalizations is not None and len(num_hospitalizations)>0:
+    num_hospitalizations=int(num_hospitalizations[0].split('\n')[1].strip())
+    daily['num_hospitalizations']=num_hospitalizations
 
 num_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div[4]/div[1]/div').getall()
 if num_death is not None and len(num_death)>0:
