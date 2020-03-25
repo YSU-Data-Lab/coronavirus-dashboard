@@ -9,7 +9,7 @@ all:
 
 crawl_ohio:
 	cd ${crawler_dir} && \
-	python3 crawler.py
+	python3 crawler_v2.py
 
 crawl_stat_card:
 	cd ${crawler_dir} && \
