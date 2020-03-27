@@ -66,7 +66,7 @@ plt.xticks(rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
-    plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_icu_file_name)
 plt.clf()
