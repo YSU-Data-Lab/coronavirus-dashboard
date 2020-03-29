@@ -32,7 +32,7 @@ csv_file_name = '../data/ohio.csv'
 
 
 ##===detect if website has updated===start
-response = requests.get(url)
+response = requests.get(url, headers={'Cache-Control': 'no-cache'})
 selector = Selector(response.text)
 stat_card_today=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div').getall()[0]
 
