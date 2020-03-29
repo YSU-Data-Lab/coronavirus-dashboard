@@ -15,6 +15,10 @@ crawl_stat_card:
 	cd ${crawler_dir} && \
 	python3 crawl_stat_card.py
 
+crawl_csv_summary_ohio:
+	cd ${project_dir} && \
+	python3 crawler/crawl_csv_summary.py 
+
 visualize_daily_py:
 	cd ${visualize_daily_py_dir} && \
 	python3 visualize_daily.py
