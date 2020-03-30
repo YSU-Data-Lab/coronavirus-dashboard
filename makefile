@@ -23,6 +23,10 @@ visualize_daily_py:
 	cd ${visualize_daily_py_dir} && \
 	python3 visualize_daily.py
 
+visualize_daily_county:
+	cd ${project_dir} && \
+	python3 ${visualize_daily_py_dir}/visualize_daily_county.py
+
 index:
 	pandoc -s -c ${css_template} -o index.html README.md 
 

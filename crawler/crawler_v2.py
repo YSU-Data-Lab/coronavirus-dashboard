@@ -95,8 +95,6 @@ if items2 is not None and len(items2)>0:
             daily['sex_females']=value
         elif fnm.fnmatch(title.lower(),"sex*males"):
             daily['sex_males']=value
-        
-
 
 county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[1]/div/p').getall()
 if county_cases is not None and len(county_cases)>0:
