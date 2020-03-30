@@ -19,7 +19,7 @@ crawl_csv_summary_ohio:
 	cd ${project_dir} && \
 	python3 crawler/crawl_csv_summary.py 
 
-visualize_daily_py:
+visualize_daily:
 	cd ${visualize_daily_py_dir} && \
 	python3 visualize_daily.py
 
