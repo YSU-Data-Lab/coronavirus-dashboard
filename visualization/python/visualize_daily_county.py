@@ -83,6 +83,9 @@ p.patches('x',
          )
 
 script, div = components(p)
+
+div=re.sub(r'<div',r'<div align="center"', div)
+
 bokeh_string = script + '\n'+ div
 bokeh_js_string = r'''\n
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.0.min.js"></script>
