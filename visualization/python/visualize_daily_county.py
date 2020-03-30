@@ -44,12 +44,6 @@ for index, county_name in enumerate(county_names):
 
 
 palette=all_palettes['Inferno'][256]+('#ffffff',)
-# palette=Oranges9
-# palette=Blues8
-# palette = Reds9+('#ffffff',)
-# palette = Inferno11
-# palette = Inferno9+('#ffffff',)
-# palette = Inferno256+('#ffffff',)
 palette = tuple(reversed(palette))
 color_mapper = LinearColorMapper(palette=palette, low=0, high=500)
 
