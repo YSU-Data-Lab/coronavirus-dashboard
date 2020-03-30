@@ -12,11 +12,9 @@
 
 ## County Statistics
 
-<p class="figure">
 <!-- bokeh_block_start -->
 
 <!-- bokeh_block_end -->
-</p>
 
 ## Project Information
 
