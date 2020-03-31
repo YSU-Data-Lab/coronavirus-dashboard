@@ -63,8 +63,8 @@ p = figure(
     x_axis_location=None, 
     y_axis_location=None,
     #plot_width=600,
-    sizing_mode='stretch_both',
-    #sizing_mode='scale_both',
+    #sizing_mode='stretch_both',
+    sizing_mode='scale_both',
     match_aspect=True,
     tooltips=[
         ("Name", "@name"), 
