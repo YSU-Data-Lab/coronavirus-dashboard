@@ -55,7 +55,7 @@ data=dict(
 )
 
 # TOOLS = "pan,wheel_zoom,reset,hover,save"
-TOOLS = "hover,save"
+TOOLS = "save"
 
 p = figure(
     title="Confirmed Cases in Counties of Ohio", 
