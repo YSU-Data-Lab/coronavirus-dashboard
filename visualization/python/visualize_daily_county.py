@@ -87,7 +87,7 @@ p.patches('x',
 
 script, div = components(p)
 
-div=re.sub(r'<div',r'<div aligned="center" style="width:600px;"', div)
+div=re.sub(r'<div',r'<div align="center"', div)
 
 bokeh_string = script + '\n'+ div
 bokeh_js_string = r'''\n
