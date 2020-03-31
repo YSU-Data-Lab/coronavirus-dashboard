@@ -1,7 +1,7 @@
 
 project_dir=$(shell pwd)
 crawler_dir=${project_dir}/crawler
-visualize_daily_py_dir=${project_dir}/visualization/python/
+visualize_daily_py_dir=${project_dir}/visualization/python
 
 css_template='https://fenggeorgeyu.github.io/css-templates/github.css'
 

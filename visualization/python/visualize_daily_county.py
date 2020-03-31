@@ -62,6 +62,9 @@ p = figure(
     tools=TOOLS,
     x_axis_location=None, 
     y_axis_location=None,
+    plot_width=600,
+    #sizing_mode='stretch_both',
+    match_aspect=True,
     tooltips=[
         ("Name", "@name"), 
         ("Num of Cases", "@count"), 
@@ -84,7 +87,7 @@ p.patches('x',
 
 script, div = components(p)
 
-div=re.sub(r'<div',r'<div align="center"', div)
+div=re.sub(r'<div',r'<div aligned="center" style="width:600px;"', div)
 
 bokeh_string = script + '\n'+ div
 bokeh_js_string = r'''\n
