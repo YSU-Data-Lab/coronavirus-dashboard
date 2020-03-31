@@ -12,7 +12,7 @@
 
 ## County Statistics
 
-<div style="margin: auto; width: 650px;">
+<div style="margin: auto; max-width: 650px;">
 <!-- bokeh_block_start -->
 
 <!-- bokeh_block_end -->
