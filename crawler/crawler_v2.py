@@ -69,7 +69,7 @@ if items1 is None or len(items1)==0:
 
 for item in items1:
     title=item.xpath('div[2]/text()').get().strip()
-    value=int(item.xpath('div/div/text()').get().strip())
+    value=int(item.xpath('div/div/text()').get().strip().replace(',', ''))
     # print(title+': ', value)
     if 'cases' in title.lower():
         daily['num_cases']=value

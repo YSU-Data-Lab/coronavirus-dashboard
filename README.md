@@ -30,6 +30,6 @@
   * [Project source code](https://github.com/YSU-Data-Lab/coronavirus-dashboard)
   * [Submit a git issue or suggestion](https://github.com/YSU-Data-Lab/coronavirus-dashboard/issues)
 * Thanks to:
-  * [Ohio Supercomputer Center](https://www.osc.edu/).
+  * [Ohio Supercomputer Center](https://www.osc.edu/)
   * [GitHub](https://github.com/)
 
