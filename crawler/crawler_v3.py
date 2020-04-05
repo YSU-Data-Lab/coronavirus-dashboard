@@ -29,12 +29,14 @@ stat_card_file_name_yesterday=stat_card_dir+yesterday_date+'.html'
 
 data_file_name = '../data/ohio.json'
 csv_file_name = '../data/ohio.csv'
+xpath_stat_card='//*[@class="stats-cards__container"]'
+xpath_stat_card_item='//*[@class="stats-cards__item"]'
 
 
 ##===detect if website has updated===start
 response = requests.get(url, headers={'Cache-Control': 'no-cache'})
 selector = Selector(response.text)
-stat_card_today=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div').getall()[0]
+stat_card_today=selector.xpath(xpath_stat_card).getall()[0]
 
 if os.path.exists(stat_card_file_name_yesterday):
     with open(stat_card_file_name_yesterday,'r') as stat_card_file_yesterday:
@@ -51,62 +53,47 @@ with open(stat_card_file_name_today, 'w+') as stat_card_file_today:
 ##===detect if website has updated===end
 
 
-##===load today's data===start
-# daily={}
+#===load today's data===start
+daily={}
 
-# daily['date'] = today_date
-# daily['timestamp_iso']=timestamp_iso
+daily['date'] = today_date
+daily['timestamp_iso']=timestamp_iso
 
-# items1=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div/div[1]/div')
-# if items1 is None or len(items1)==0:
-#     print('crawler: no data items found')
-#     sys.exit(1)
+items1=selector.xpath(xpath_stat_card_item)
+if items1 is None or len(items1)==0:
+    print('crawler: no data items found')
+    sys.exit(1)
 # print(items1)
 
-# for item in items1:
-#     title=item.xpath('div[2]/text()').get().strip()
-#     value=int(item.xpath('div/div/text()').get().strip().replace(',', ''))
-#     # print(title+': ', value)
-#     if 'cases' in title.lower():
-#         daily['num_cases']=value
-#     elif 'icu' in title.lower():
-#         daily['num_icu']=value
-#     elif 'hospitalizations' in title.lower():
-#         daily['num_hospitalizations']=value
-#     elif 'death' in title.lower():
-#         daily['num_death']=value
+for item in items1:
+    title=item.xpath('div[2]/text()').get()
+    value=item.xpath('div[1]/text()').get()
+    if title is None or value is None:
+        print('crawling xpath error of title and value')
+        exit(1)
+    else:
+        title=title.strip()
+        valute=value.strip()
+    # print(title)
+    # print(value)
+    if 'cases' in title.lower():
+        daily['num_cases']=int(value.replace(',', ''))
+    elif 'icu' in title.lower():
+        daily['num_icu']=int(value.replace(',', ''))
+    elif 'hospitalizations' in title.lower():
+        daily['num_hospitalizations']=int(value.replace(',', ''))
+    elif 'death' in title.lower():
+        daily['num_death']=int(value.replace(',', ''))
+    elif "age range" in title.lower():
+        daily['age_range']=value
+    elif "median age" in title.lower():
+        daily['median_age']=value
+    elif fnm.fnmatch(title.lower(),"sex*females"):
+        daily['sex_females']=value
+    elif fnm.fnmatch(title.lower(),"sex*males"):
+        daily['sex_males']=value
 
-# items2=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div/div[2]/div')
-
-# if items2 is not None and len(items2)>0:
-#     for item in items2:
-#         title=item.xpath('div[2]/text()').get().strip()
-#         value=item.xpath('div/div/text()').get().strip()
-#         # print(title+': ', value)
-#         if "age range" in title.lower():
-#             daily['age_range']=value
-#         elif "median age" in title.lower():
-#             daily['median_age']=value
-#         elif fnm.fnmatch(title.lower(),"sex*females"):
-#             daily['sex_females']=value
-#         elif fnm.fnmatch(title.lower(),"sex*males"):
-#             daily['sex_males']=value
-
-# county_cases=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[1]/div/p').getall()
-# if county_cases is not None and len(county_cases)>0:
-#     county_cases=county_cases[0]
-#     county_cases=county_cases.replace('<p dir="ltr">*','')
-#     county_cases=county_cases.replace('</p>','')
-#     daily['county_cases']=county_cases.strip()
-
-# county_death=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[4]/div/div/div/div[2]/div/p').getall()
-# if county_death is not None and len(county_death)>0:
-#     county_death=county_death[0]
-#     county_death=county_death.replace('<p dir="ltr">**','')
-#     county_death=county_death.replace('</p>','')
-#     daily['county_death']=county_death.strip()
-
-# print(daily)
+print(daily)
 # # # ##===load today's data===end
 
 
