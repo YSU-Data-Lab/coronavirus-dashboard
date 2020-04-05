@@ -7,7 +7,7 @@ import matplotlib.ticker as ticker
 
 # fig_width=8
 # fig_height=3
-value_text_size=11
+value_text_size=9
 rotation_degree=90
 
 data_file_name = '../../data/ohio.json'
