@@ -16,7 +16,8 @@ if os.path.exists(stat_card_file_name):
 
 response = requests.get('https://coronavirus.ohio.gov/wps/portal/gov/covid-19/')
 selector = Selector(response.text)
-stat_card=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div').getall()[0]
+xpath='//*[@id="odx-main-content"]/article/section[1]/div'
+stat_card=selector.xpath(xpath).getall()[0]
 
 # print(stat_card)
 

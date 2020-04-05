@@ -36,10 +36,6 @@ response = requests.get(url, headers={'Cache-Control': 'no-cache'})
 selector = Selector(response.text)
 stat_card_today=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div').getall()[0]
 
-# if os.path.exists(stat_card_file_name_today):
-#     print('Crawling for today finished previously. Exit.')
-#     sys.exit(1)
-
 if os.path.exists(stat_card_file_name_yesterday):
     with open(stat_card_file_name_yesterday,'r') as stat_card_file_yesterday:
         stat_card_yesterday=stat_card_file_yesterday.read()
@@ -56,31 +52,31 @@ with open(stat_card_file_name_today, 'w+') as stat_card_file_today:
 
 
 ##===load today's data===start
-daily={}
+# daily={}
 
-daily['date'] = today_date
-daily['timestamp_iso']=timestamp_iso
+# daily['date'] = today_date
+# daily['timestamp_iso']=timestamp_iso
 
-items1=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[1]/div')
-if items1 is None or len(items1)==0:
-    print('crawler: no data items found')
-    sys.exit(1)
+# items1=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div/div[1]/div')
+# if items1 is None or len(items1)==0:
+#     print('crawler: no data items found')
+#     sys.exit(1)
 # print(items1)
 
-for item in items1:
-    title=item.xpath('div[2]/text()').get().strip()
-    value=int(item.xpath('div/div/text()').get().strip().replace(',', ''))
-    # print(title+': ', value)
-    if 'cases' in title.lower():
-        daily['num_cases']=value
-    elif 'icu' in title.lower():
-        daily['num_icu']=value
-    elif 'hospitalizations' in title.lower():
-        daily['num_hospitalizations']=value
-    elif 'death' in title.lower():
-        daily['num_death']=value
+# for item in items1:
+#     title=item.xpath('div[2]/text()').get().strip()
+#     value=int(item.xpath('div/div/text()').get().strip().replace(',', ''))
+#     # print(title+': ', value)
+#     if 'cases' in title.lower():
+#         daily['num_cases']=value
+#     elif 'icu' in title.lower():
+#         daily['num_icu']=value
+#     elif 'hospitalizations' in title.lower():
+#         daily['num_hospitalizations']=value
+#     elif 'death' in title.lower():
+#         daily['num_death']=value
 
-# items2=selector.xpath('//*[@id="odx-main-content"]/article/section[2]/div/div[2]/div')
+# items2=selector.xpath('//*[@id="odx-main-content"]/article/section[1]/div/div[2]/div')
 
 # if items2 is not None and len(items2)>0:
 #     for item in items2:
@@ -110,7 +106,7 @@ for item in items1:
 #     county_death=county_death.replace('</p>','')
 #     daily['county_death']=county_death.strip()
 
-print(daily)
+# print(daily)
 # # # ##===load today's data===end
 
 
