@@ -94,35 +94,35 @@ for item in items1:
         daily['sex_males']=value
 
 print(daily)
-# # # ##===load today's data===end
+##===load today's data===end
 
 
-# ##===add today's data to daily entries===start
-# with open(data_file_name, 'r') as data_file:
-#     data=json.load(data_file)
+##===add today's data to daily entries===start
+with open(data_file_name, 'r') as data_file:
+    data=json.load(data_file)
 
-# if data is not None:
-#     daily_entries=data['daily']
-#     daily_entries_new=[]
-#     for d in daily_entries:
-#         if d['date'].lower()!=today_date.lower():
-#             daily_entries_new.append(d)
-#     daily_entries=daily_entries_new
-# else:
-#     daily_entries=[]
+if data is not None:
+    daily_entries=data['daily']
+    daily_entries_new=[]
+    for d in daily_entries:
+        if d['date'].lower()!=today_date.lower():
+            daily_entries_new.append(d)
+    daily_entries=daily_entries_new
+else:
+    daily_entries=[]
 
-# daily_entries.append(daily)
-# data['daily']=daily_entries
-# ##===add today's data to daily entries===end
+daily_entries.append(daily)
+data['daily']=daily_entries
+##===add today's data to daily entries===end
 
-# ##===dump to json file===
-# with open(data_file_name, 'w') as data_file:
-#     json.dump(data, data_file, indent=4)
-# print('data dumped in json file:',data_file_name)
+##===dump to json file===
+with open(data_file_name, 'w') as data_file:
+    json.dump(data, data_file, indent=4)
+print('data dumped in json file:',data_file_name)
 
-# ##===dump to csv file===
-# with open(csv_file_name, 'w+') as csv_file:
-#     df = pd.DataFrame(daily_entries)
-#     df.to_csv (csv_file_name, index = None, header=True)
-# print('data dumped in csv file:', csv_file_name)
+##===dump to csv file===
+with open(csv_file_name, 'w+') as csv_file:
+    df = pd.DataFrame(daily_entries)
+    df.to_csv (csv_file_name, index = None, header=True)
+print('data dumped in csv file:', csv_file_name)
 
