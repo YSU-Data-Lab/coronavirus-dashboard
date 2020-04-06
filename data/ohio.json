@@ -199,6 +199,18 @@
             "median_age": "\n                53\n            ",
             "sex_males": "\n                48%*\n            ",
             "sex_females": "\n                51%*\n            "
+        },
+        {
+            "date": "2020-04-06",
+            "timestamp_iso": "2020-04-06T14:01:09.245992-04:00",
+            "num_cases": 4450,
+            "num_icu": 371,
+            "num_hospitalizations": 1214,
+            "num_death": 142,
+            "age_range": "\n                 <1\u2013101\n            ",
+            "median_age": "\n                54\n            ",
+            "sex_males": "\n                48%*\n            ",
+            "sex_females": "\n                52%*\n            "
         }
     ]
 }
