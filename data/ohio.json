@@ -61,12 +61,12 @@
             "num_icu": 75,
             "num_hospitalizations": 182,
             "num_death": 10,
-            "age_range": "<1\u201394",
+            "age_range": "<1-94",
             "median_age": "51",
             "sex_males": "53%",
             "sex_females": "47%",
-            "county_cases": "Number of counties with cases:  55 \u2013 Ashland (1), Ashtabula (3), Belmont (3), Butler (18), Carroll (3), Champaign (1), Clark (2), Clermont (5), Clinton (2), Columbiana (4), Coshocton (4), Crawford (1), Cuyahoga (206), Darke (1), Defiance (2), Delaware (12), Erie (2), Fairfield (5), Fayette (1), Franklin (88), Gallia (1), Geauga (4), Greene (3), Hamilton (48), Hancock (1), Highland (1), Huron (2), Knox (2), Lake (14), Lawrence (1), Licking (3), Logan (2), Lorain (37), Lucas (23), Madison (2), Mahoning (42), Marion (4), Medina (22), Mercer (1), Miami (19), Montgomery (14), Pickaway (1), Portage (4), Richland (4), Sandusky (1), Seneca (1), Stark (12), Summit (43), Trumbull (9), Tuscarawas (3), Union (3), Warren (8), Washington (1), Wayne (1), Wood (3)",
-            "county_death": "Number of deaths:  10 \u2013 Cuyahoga (2), Erie (1), Franklin (2), Gallia (1), Lucas (1), Miami (1), Stark (2)"
+            "county_cases": "Number of counties with cases:  55 - Ashland (1), Ashtabula (3), Belmont (3), Butler (18), Carroll (3), Champaign (1), Clark (2), Clermont (5), Clinton (2), Columbiana (4), Coshocton (4), Crawford (1), Cuyahoga (206), Darke (1), Defiance (2), Delaware (12), Erie (2), Fairfield (5), Fayette (1), Franklin (88), Gallia (1), Geauga (4), Greene (3), Hamilton (48), Hancock (1), Highland (1), Huron (2), Knox (2), Lake (14), Lawrence (1), Licking (3), Logan (2), Lorain (37), Lucas (23), Madison (2), Mahoning (42), Marion (4), Medina (22), Mercer (1), Miami (19), Montgomery (14), Pickaway (1), Portage (4), Richland (4), Sandusky (1), Seneca (1), Stark (12), Summit (43), Trumbull (9), Tuscarawas (3), Union (3), Warren (8), Washington (1), Wayne (1), Wood (3)",
+            "county_death": "Number of deaths:  10 - Cuyahoga (2), Erie (1), Franklin (2), Gallia (1), Lucas (1), Miami (1), Stark (2)"
         },
         {
             "date": "2020-03-26",
@@ -75,7 +75,7 @@
             "num_icu": 91,
             "num_hospitalizations": 223,
             "num_death": 15,
-            "age_range": "<1\u201394",
+            "age_range": "<1-94",
             "median_age": "51",
             "sex_males": "53%",
             "sex_females": "47%"
@@ -87,7 +87,7 @@
             "num_icu": 107,
             "num_hospitalizations": 276,
             "num_death": 19,
-            "age_range": "<1\u201396",
+            "age_range": "<1-96",
             "median_age": "52",
             "sex_males": "52%",
             "sex_females": "48%"
@@ -99,7 +99,7 @@
             "num_icu": 123,
             "num_hospitalizations": 344,
             "num_death": 25,
-            "age_range": "<1\u201396",
+            "age_range": "<1-96",
             "median_age": "52",
             "sex_males": "50%*",
             "sex_females": "49%*"
@@ -111,7 +111,7 @@
             "num_icu": 139,
             "num_hospitalizations": 403,
             "num_death": 29,
-            "age_range": "<1\u201398",
+            "age_range": "<1-98",
             "median_age": "52",
             "sex_males": "50%*",
             "sex_females": "49%*"
@@ -123,7 +123,7 @@
             "num_icu": 163,
             "num_hospitalizations": 475,
             "num_death": 39,
-            "age_range": "<1\u201398",
+            "age_range": "<1-98",
             "median_age": "53",
             "sex_males": "50%*",
             "sex_females": "50%*"
@@ -135,7 +135,7 @@
             "num_icu": 198,
             "num_hospitalizations": 585,
             "num_death": 55,
-            "age_range": "<1\u201399",
+            "age_range": "<1-99",
             "median_age": "53",
             "sex_males": "49%*",
             "sex_females": "51%*"
@@ -147,7 +147,7 @@
             "num_icu": 222,
             "num_hospitalizations": 679,
             "num_death": 65,
-            "age_range": "<1\u201399",
+            "age_range": "<1-99",
             "median_age": "53",
             "sex_males": "49%*",
             "sex_females": "51%*"
@@ -159,7 +159,7 @@
             "num_icu": 260,
             "num_hospitalizations": 802,
             "num_death": 81,
-            "age_range": "<1\u201399",
+            "age_range": "<1-99",
             "median_age": "53",
             "sex_males": "49%*",
             "sex_females": "51%*"
@@ -171,7 +171,7 @@
             "num_icu": 288,
             "num_hospitalizations": 895,
             "num_death": 91,
-            "age_range": "<1\u2013101",
+            "age_range": "<1-101",
             "median_age": "54",
             "sex_males": "48%*",
             "sex_females": "51%*"
@@ -183,7 +183,7 @@
             "num_icu": 326,
             "num_hospitalizations": 1006,
             "num_death": 102,
-            "age_range": "<1\u2013101",
+            "age_range": "<1-101",
             "median_age": "53",
             "sex_males": "48%*",
             "sex_females": "51%*"
@@ -195,19 +195,19 @@
             "num_icu": 346,
             "num_hospitalizations": 1104,
             "num_death": 119,
-            "age_range": "<1\u2013101",
+            "age_range": "<1-101",
             "median_age": "53",
             "sex_males": "48%*",
             "sex_females": "51%*"
         },
         {
             "date": "2020-04-06",
-            "timestamp_iso": "2020-04-06T14:10:04.613163-04:00",
+            "timestamp_iso": "2020-04-06T14:20:06.097229-04:00",
             "num_cases": 4450,
             "num_icu": 371,
             "num_hospitalizations": 1214,
             "num_death": 142,
-            "age_range": "<1\u2013101",
+            "age_range": "<1-101",
             "median_age": "54",
             "sex_males": "48%*",
             "sex_females": "52%*"

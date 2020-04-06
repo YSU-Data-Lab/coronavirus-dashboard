@@ -85,7 +85,7 @@ for item in items1:
     elif 'death' in title.lower():
         daily['num_death']=int(value.replace(',', ''))
     elif "age range" in title.lower():
-        daily['age_range']=value.replace('\n','').strip()
+        daily['age_range']=value.replace('\n','').strip().replace('\u2013','-')
     elif "median age" in title.lower():
         daily['median_age']=value.replace('\n','').strip()
     elif fnm.fnmatch(title.lower(),"sex*females"):
