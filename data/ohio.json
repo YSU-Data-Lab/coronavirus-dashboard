@@ -195,22 +195,22 @@
             "num_icu": 346,
             "num_hospitalizations": 1104,
             "num_death": 119,
-            "age_range": "\n                 <1\u2013101\n            ",
-            "median_age": "\n                53\n            ",
-            "sex_males": "\n                48%*\n            ",
-            "sex_females": "\n                51%*\n            "
+            "age_range": "<1\u2013101",
+            "median_age": "53",
+            "sex_males": "48%*",
+            "sex_females": "51%*"
         },
         {
             "date": "2020-04-06",
-            "timestamp_iso": "2020-04-06T14:05:05.414169-04:00",
+            "timestamp_iso": "2020-04-06T14:10:04.613163-04:00",
             "num_cases": 4450,
             "num_icu": 371,
             "num_hospitalizations": 1214,
             "num_death": 142,
-            "age_range": "\n                 <1\u2013101\n            ",
-            "median_age": "\n                54\n            ",
-            "sex_males": "\n                48%*\n            ",
-            "sex_females": "\n                52%*\n            "
+            "age_range": "<1\u2013101",
+            "median_age": "54",
+            "sex_males": "48%*",
+            "sex_females": "52%*"
         }
     ]
 }

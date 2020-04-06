@@ -85,13 +85,13 @@ for item in items1:
     elif 'death' in title.lower():
         daily['num_death']=int(value.replace(',', ''))
     elif "age range" in title.lower():
-        daily['age_range']=value
+        daily['age_range']=value.replace('\n','').strip()
     elif "median age" in title.lower():
-        daily['median_age']=value
+        daily['median_age']=value.replace('\n','').strip()
     elif fnm.fnmatch(title.lower(),"sex*females"):
-        daily['sex_females']=value
+        daily['sex_females']=value.replace('\n','').strip()
     elif fnm.fnmatch(title.lower(),"sex*males"):
-        daily['sex_males']=value
+        daily['sex_males']=value.replace('\n','').strip()
 
 print(daily)
 ##===load today's data===end
