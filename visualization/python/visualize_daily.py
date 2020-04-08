@@ -55,12 +55,11 @@ plt.cla()
 plt.close()
 
 
-
 y=df['num_icu'].dropna() # delete NaN entries
 x=df['date'][len(df['date'])-len(y):] # subarray of dates with num_icu available
 # plt.figure(figsize=(fig_width, fig_height))
 plt.title('Number of ICU admissions')
-plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2)
+plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2, label='Total ICU Cases')
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
 #plt.xlabel('Date')
@@ -76,28 +75,40 @@ plt.cla()
 plt.close()
 
 
+df['num_new_hospitalizations']=df['num_hospitalizations'].diff() # add newly confirmed cases
+
 x=df['date']
 y=df['num_hospitalizations']
+z=df['num_new_hospitalizations']
 # plt.figure(figsize=(fig_width, fig_height))
 plt.title('Number of Hospitalizations in Ohio')
-plt.plot(x, y, marker='.', markersize=12, color='olive', linewidth=2)
+plt.plot(x, y, marker='.', markersize=12, color='olive', linewidth=2, label='Total Hospitalizations')
+plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='New Hospitalizations')
+plt.legend()
 bottom, top = plt.ylim()  
 plt.ylim(0, top*1.1)
 plt.xticks(rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     plt.text(i, j, str(j), ha='center', va='bottom')
+for i,j in zip(x[1:],z[1:]):
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_hospitalizations_file_name)
 plt.clf()
 plt.cla()
 plt.close()
 
+df['num_new_deaths']=df['num_death'].diff() # add newly confirmed cases
 
 x=df['date']
 y=df['num_death']
+z=df['num_new_deaths']
 # plt.figure(figsize=(fig_width, fig_height))
-plt.plot(x, y, marker='^', color='grey', linewidth=2)
+plt.plot(x, y, marker='^', color='grey', linewidth=2, label='Total Deaths')
+plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='New Deaths')
+plt.legend()
 plt.title('Number of Deaths')
 bottom, top = plt.ylim()  
 plt.ylim(0, top*1.1)     
@@ -105,11 +116,12 @@ plt.xticks(rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     plt.text(i, j, str(j), ha='center', va='bottom')
+for i,j in zip(x[1:],z[1:]):
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_death_file_name)
 plt.clf()
 plt.cla()
 plt.close()
-
-
 
