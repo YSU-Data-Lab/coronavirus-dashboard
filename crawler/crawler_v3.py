@@ -76,14 +76,22 @@ for item in items1:
         valute=value.strip()
     # print(title)
     # print(value)
-    if 'cases' in title.lower():
+    if 'total cases' in title.lower():
         daily['num_cases']=int(value.replace(',', ''))
-    elif 'icu' in title.lower():
+    elif 'confirmed cases' in title.lower():
+        daily['num_confirmed_cases']=int(value.replace(',', ''))
+    elif 'expanded case definition' in title.lower():
+        daily['num_probable_cases']=int(value.replace(',', ''))
+    elif 'total deaths' in title.lower():
+        daily['num_death']=int(value.replace(',', ''))
+    elif 'confirmed deaths' in title.lower():
+        daily['num_confirmed_death']=int(value.replace(',', ''))
+    elif 'expanded death definition' in title.lower():
+        daily['num_probable_death']=int(value.replace(',', ''))
+    elif 'icu admissions' in title.lower():
         daily['num_icu']=int(value.replace(',', ''))
     elif 'hospitalizations' in title.lower():
         daily['num_hospitalizations']=int(value.replace(',', ''))
-    elif 'death' in title.lower():
-        daily['num_death']=int(value.replace(',', ''))
     elif "age range" in title.lower():
         daily['age_range']=value.replace('\n','').strip().replace('\u2013','-')
     elif "median age" in title.lower():
