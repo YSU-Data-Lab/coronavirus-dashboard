@@ -34,7 +34,7 @@ y=df['num_cases']
 # plt.figure(figsize=(fig_width, fig_height))
 plt.title('Confirmed Cases in Ohio')
 plt.plot(x, y, marker='.', markersize=12, color='red', linewidth=2, label='Total Confirmed Cases')
-plt.legend()
+# plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
 #plt.xlabel('Date')
@@ -55,7 +55,7 @@ x=df['date']
 z=df['num_new_cases']
 plt.title('Newly Confirmed Cases in Ohio')
 plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='Newly Confirmed Cases')
-plt.legend()
+# plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
 plt.xticks(rotation=rotation_degree)
