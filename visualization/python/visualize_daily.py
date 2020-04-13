@@ -12,6 +12,7 @@ rotation_degree=90
 
 data_file_name = '../../data/ohio.json'
 num_cases_file_name='../../figure/num_cases.svg'
+num_new_cases_file_name='../../figure/num_new_cases.svg'
 # num_counties_file_name='../../figure/num_counties.svg'
 num_icu_file_name='../../figure/num_icu.svg'
 num_hospitalizations_file_name='../../figure/num_hospitalizations.svg'
@@ -30,11 +31,9 @@ df['num_new_cases']=df['num_cases'].diff() # add newly confirmed cases
 
 x=df['date']
 y=df['num_cases']
-z=df['num_new_cases']
 # plt.figure(figsize=(fig_width, fig_height))
 plt.title('Confirmed Cases in Ohio')
 plt.plot(x, y, marker='.', markersize=12, color='red', linewidth=2, label='Total Confirmed Cases')
-plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='Newly Confirmed Cases')
 plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
@@ -45,15 +44,29 @@ for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
     # plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
     plt.text(i, j, str(j), ha='center', va='bottom')
-for i,j in zip(x[1:],z[1:]):
-    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_cases_file_name)
 plt.clf()
 plt.cla()
 plt.close()
 
+
+x=df['date']
+z=df['num_new_cases']
+plt.title('Newly Confirmed Cases in Ohio')
+plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='Newly Confirmed Cases')
+plt.legend()
+bottom, top = plt.ylim()
+plt.ylim(0, top*1.1)
+plt.xticks(rotation=rotation_degree)
+plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+for i,j in zip(x[1:],z[1:]):
+    plt.text(i, j, str(int(j)), ha='center', va='bottom')
+plt.tight_layout()
+plt.savefig(num_new_cases_file_name)
+plt.clf()
+plt.cla()
+plt.close()
 
 
 y=df['num_icu'].dropna() # delete NaN entries
