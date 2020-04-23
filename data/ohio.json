@@ -447,6 +447,22 @@
             "median_age": "51",
             "sex_males": "60%*",
             "sex_females": "40%*"
+        },
+        {
+            "date": "2020-04-23",
+            "timestamp_iso": "2020-04-23T14:01:08.169442-04:00",
+            "num_confirmed_cases": 14142,
+            "num_probable_cases": 552,
+            "num_cases": 14694,
+            "num_hospitalizations": 2960,
+            "num_confirmed_death": 618,
+            "num_probable_death": 38,
+            "num_death": 656,
+            "num_icu": 900,
+            "age_range": "<1-106",
+            "median_age": "51",
+            "sex_males": "59%*",
+            "sex_females": "41%*"
         }
     ]
 }
