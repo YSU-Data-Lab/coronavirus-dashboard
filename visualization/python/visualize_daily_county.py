@@ -106,6 +106,9 @@ str_insert=bokeh_js_string + bokeh_string
 
 text = re.sub(r'<!-- bokeh_block_start -->.*<!-- bokeh_block_end -->','<!-- bokeh_block_start -->\n'+str_insert+r'\n<!-- bokeh_block_end -->', text, flags=re.DOTALL)
 
+with open(index_file_name, 'w') as f:
+     f.write(text)
+
 # # insert county graph in readme file
 # with open(readme_file_name, 'r') as f:
 #     text = f.read()
