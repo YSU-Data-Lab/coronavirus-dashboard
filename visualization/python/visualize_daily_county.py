@@ -16,6 +16,7 @@ import os
 today_date=basic.get_today_date()
 csv_file_name='data/csv_county_summary/csv_county_summary_'+today_date+'.csv'
 index_file_name='index.html'
+readme_file_name='README.md'
 
 if os.path.exists(csv_file_name):
 	df=pd.read_csv(csv_file_name)
@@ -45,7 +46,7 @@ for index, county_name in enumerate(county_names):
 
 palette=all_palettes['Inferno'][256]+('#ffffff',)
 palette = tuple(reversed(palette))
-color_mapper = LinearColorMapper(palette=palette, low=0, high=500)
+color_mapper = LinearColorMapper(palette=palette, low=0, high=5000)
 
 data=dict(
     x=county_xs,
@@ -97,14 +98,22 @@ bokeh_js_string = r'''\n
 \n
 '''
 
-
+# insert county graph in index file
 with open(index_file_name, 'r') as f:
     text = f.read()
-
 
 str_insert=bokeh_js_string + bokeh_string
 
 text = re.sub(r'<!-- bokeh_block_start -->.*<!-- bokeh_block_end -->','<!-- bokeh_block_start -->\n'+str_insert+r'\n<!-- bokeh_block_end -->', text, flags=re.DOTALL)
 
-with open(index_file_name, 'w') as f:
+# insert county graph in readme file
+with open(readme_file_name, 'r') as f:
+    text = f.read()
+
+str_insert=bokeh_js_string + bokeh_string
+
+text = re.sub(r'<!-- bokeh_block_start -->.*<!-- bokeh_block_end -->','<!-- bokeh_block_start -->\n'+str_insert+r'\n<!-- bokeh_block_end -->', text, flags=re.DOTALL)
+
+with open(readme_file_name, 'w') as f:
     f.write(text)
+
