@@ -77,29 +77,29 @@ for item in items1:
     # print(title)
     # print(value)
     if 'total cases' in title.lower():
-        daily['num_cases']=int(value.replace(',', ''))
+        daily['num_cases']=int(value.replace(',', '').replace('*', ''))
     elif 'confirmed cases' in title.lower():
-        daily['num_confirmed_cases']=int(value.replace(',', ''))
+        daily['num_confirmed_cases']=int(value.replace(',', '').replace('*', ''))
     elif 'expanded case definition' in title.lower():
-        daily['num_probable_cases']=int(value.replace(',', ''))
+        daily['num_probable_cases']=int(value.replace(',', '').replace('*', ''))
     elif 'total deaths' in title.lower():
-        daily['num_death']=int(value.replace(',', ''))
+        daily['num_death']=int(value.replace(',', '').replace('*', ''))
     elif 'confirmed deaths' in title.lower():
-        daily['num_confirmed_death']=int(value.replace(',', ''))
+        daily['num_confirmed_death']=int(value.replace(',', '').replace('*', ''))
     elif 'expanded death definition' in title.lower():
-        daily['num_probable_death']=int(value.replace(',', ''))
+        daily['num_probable_death']=int(value.replace(',', '').replace('*', ''))
     elif 'icu admissions' in title.lower():
-        daily['num_icu']=int(value.replace(',', ''))
+        daily['num_icu']=int(value.replace(',', '').replace('*', ''))
     elif 'hospitalizations' in title.lower():
-        daily['num_hospitalizations']=int(value.replace(',', ''))
+        daily['num_hospitalizations']=int(value.replace(',', '').replace('*', ''))
     elif "age range" in title.lower():
-        daily['age_range']=value.replace('\n','').strip().replace('\u2013','-')
+        daily['age_range']=value.replace('\n','').replace('*', '').strip().replace('\u2013','-')
     elif "median age" in title.lower():
-        daily['median_age']=value.replace('\n','').strip()
+        daily['median_age']=value.replace('\n','').replace('*', '').strip()
     elif fnm.fnmatch(title.lower(),"sex*females"):
-        daily['sex_females']=value.replace('\n','').strip()
+        daily['sex_females']=value.replace('\n','').replace('*', '').strip()
     elif fnm.fnmatch(title.lower(),"sex*males"):
-        daily['sex_males']=value.replace('\n','').strip()
+        daily['sex_males']=value.replace('\n','').replace('*', '').strip()
 
 print(daily)
 ##===load today's data===end
