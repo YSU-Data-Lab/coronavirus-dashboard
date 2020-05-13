@@ -767,6 +767,22 @@
             "median_age": "50",
             "sex_males": "54%",
             "sex_females": "45%"
+        },
+        {
+            "date": "2020-05-13",
+            "timestamp_iso": "2020-05-13T14:01:09.195204-04:00",
+            "num_confirmed_cases": 24245,
+            "num_probable_cases": 1476,
+            "num_cases": 25721,
+            "num_hospitalizations": 4618,
+            "num_confirmed_death": 1347,
+            "num_probable_death": 136,
+            "num_death": 1483,
+            "num_icu": 1248,
+            "age_range": "<1-108",
+            "median_age": "50",
+            "sex_males": "54%",
+            "sex_females": "46%"
         }
     ]
 }
