@@ -76,7 +76,7 @@ df['num_new_avg_7d_cases']=df['num_cases'].diff(7)/7 # add newly confirmed cases
 x=df['date']
 z=df['num_new_avg_7d_cases']
 plt.title('7-Day Average Newly Confirmed Cases in Ohio')
-plt.plot(x, z, marker='.', markersize=12, color='yellow', linewidth=2, label='Avg Daily New in Last 7 Days')
+plt.plot(x, z, marker='.', markersize=12, color='gold', linewidth=2,label='Avg Daily New in Last 7 Days')
 # plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
