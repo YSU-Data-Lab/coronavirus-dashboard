@@ -879,6 +879,22 @@
             "median_age": "50",
             "sex_males": "53%",
             "sex_females": "46%"
+        },
+        {
+            "date": "2020-05-20",
+            "timestamp_iso": "2020-05-20T14:01:07.249369-04:00",
+            "num_confirmed_cases": 27517,
+            "num_probable_cases": 1919,
+            "num_cases": 29436,
+            "num_hospitalizations": 5198,
+            "num_confirmed_death": 1603,
+            "num_probable_death": 178,
+            "num_death": 1781,
+            "num_icu": 1369,
+            "age_range": "<1-109",
+            "median_age": "50",
+            "sex_males": "53%",
+            "sex_females": "46%"
         }
     ]
 }
