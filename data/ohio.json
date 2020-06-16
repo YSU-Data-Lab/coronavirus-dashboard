@@ -1311,6 +1311,22 @@
             "median_age": "48",
             "sex_males": "51%",
             "sex_females": "48%"
+        },
+        {
+            "date": "2020-06-16",
+            "timestamp_iso": "2020-06-16T14:01:07.700186-04:00",
+            "num_confirmed_cases": 38911,
+            "num_probable_cases": 3099,
+            "num_cases": 42010,
+            "num_hospitalizations": 7007,
+            "num_confirmed_death": 2362,
+            "num_probable_death": 235,
+            "num_death": 2597,
+            "num_icu": 1784,
+            "age_range": "<1-109",
+            "median_age": "48",
+            "sex_males": "51%",
+            "sex_females": "48%"
         }
     ]
 }
