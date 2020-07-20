@@ -1839,6 +1839,22 @@
             "median_age": "43",
             "sex_males": "49%",
             "sex_females": "50%"
+        },
+        {
+            "date": "2020-07-20",
+            "timestamp_iso": "2020-07-20T14:10:10.499745-04:00",
+            "num_confirmed_cases": 71952,
+            "num_probable_cases": 4216,
+            "num_cases": 76168,
+            "num_hospitalizations": 9610,
+            "num_confirmed_death": 2931,
+            "num_probable_death": 258,
+            "num_death": 3189,
+            "num_icu": 2344,
+            "age_range": "<1-109",
+            "median_age": "43",
+            "sex_males": "49%",
+            "sex_females": "51%"
         }
     ]
 }
