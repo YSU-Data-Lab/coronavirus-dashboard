@@ -2015,6 +2015,22 @@
             "median_age": "42",
             "sex_males": "48%",
             "sex_females": "51%"
+        },
+        {
+            "date": "2020-08-04",
+            "timestamp_iso": "2020-08-04T10:03:12.981954-04:00",
+            "num_confirmed_cases": 88997,
+            "num_probable_cases": 4966,
+            "num_cases": 93963,
+            "num_hospitalizations": 10992,
+            "num_confirmed_death": 3271,
+            "num_probable_death": 268,
+            "num_death": 3539,
+            "num_icu": 2570,
+            "age_range": "<1-109",
+            "median_age": "42",
+            "sex_males": "48%",
+            "sex_females": "51%"
         }
     ]
 }
