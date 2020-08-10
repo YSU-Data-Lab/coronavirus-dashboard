@@ -6,14 +6,7 @@ plt.switch_backend('agg')
 import matplotlib.ticker as ticker
 
 
-fig_height=8
-fig_width=10
-value_text_size=5
-x_text_size=5
-rotation_degree=90
-marker_size=5
-line_width=0.5
-label_size=5
+
 
 data_file_name = '../../data/ohio.json'
 num_cases_file_name='../../figure/num_cases.svg'
@@ -34,6 +27,17 @@ else:
     
 df = pd.DataFrame(daily_entries)
 
+
+# plot parameters
+num_days=len(df['date'])
+fig_height=8
+fig_width=int(10*num_days/141) #lenght=15 and num_days=141 (08/10/20)
+value_text_size=5
+x_text_size=5
+rotation_degree=90
+marker_size=5
+line_width=0.5
+label_size=5
 
 ## num of total cases
 x=df['date']
