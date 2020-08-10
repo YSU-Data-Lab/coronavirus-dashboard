@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import matplotlib.ticker as ticker
 
-fig_width=10
+
 fig_height=8
+fig_width=10
 value_text_size=5
 x_text_size=5
 rotation_degree=90
