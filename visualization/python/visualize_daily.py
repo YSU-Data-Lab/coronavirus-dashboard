@@ -5,10 +5,14 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import matplotlib.ticker as ticker
 
-# fig_width=8
-# fig_height=3
-# value_text_size=9
+fig_width=10
+fig_height=8
+value_text_size=5
+x_text_size=5
 rotation_degree=90
+marker_size=5
+line_width=0.5
+label_size=5
 
 data_file_name = '../../data/ohio.json'
 num_cases_file_name='../../figure/num_cases.svg'
@@ -33,19 +37,21 @@ df = pd.DataFrame(daily_entries)
 ## num of total cases
 x=df['date']
 y=df['num_cases']
-# plt.figure(figsize=(fig_width, fig_height))
+plt.figure(figsize=(fig_width, fig_height))
 plt.title('Confirmed Cases in Ohio')
-plt.plot(x, y, marker='.', markersize=12, color='red', linewidth=2, label='Total Confirmed Cases')
+plt.plot(x, y, marker='.', markersize=marker_size, color='red', linewidth=line_width, label='Total Confirmed Cases')
 # plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
 #plt.xlabel('Date')
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
+#plt.tick_params(axis='x', which='major', labelsize=label_size)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
-    # plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
-    plt.text(i, j, str(j), ha='center', va='bottom')
+    #plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    #plt.text(i, j, str(j), ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_cases_file_name)
 plt.clf()
@@ -56,15 +62,17 @@ plt.close()
 df['num_new_cases']=df['num_cases'].diff() # add newly confirmed cases
 x=df['date']
 z=df['num_new_cases']
+plt.figure(figsize=(fig_width, fig_height))
 plt.title('Newly Confirmed Cases in Ohio')
-plt.plot(x, z, marker='.', markersize=12, color='orange', linewidth=2, label='Newly Confirmed Cases')
+plt.plot(x, z, marker='.', markersize=marker_size, color='orange', linewidth=line_width, label='Newly Confirmed Cases')
 # plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x[1:],z[1:]):
-    plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    #plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_new_cases_file_name)
 plt.clf()
@@ -75,15 +83,17 @@ plt.close()
 df['num_new_avg_7d_cases']=df['num_cases'].diff(7)/7 # add newly confirmed cases
 x=df['date']
 z=df['num_new_avg_7d_cases']
+plt.figure(figsize=(fig_width, fig_height))
 plt.title('7-Day Average Newly Confirmed Cases in Ohio')
-plt.plot(x, z, marker='.', markersize=12, color='gold', linewidth=2,label='Avg Daily New in Last 7 Days')
+plt.plot(x, z, marker='.', markersize=marker_size, color='gold', linewidth=line_width, label='Avg Daily New in Last 7 Days')
 # plt.legend()
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x[8:],z[8:]):
-    plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    #plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_new_avg_7d_cases_file_name)
 plt.clf()
@@ -93,17 +103,18 @@ plt.close()
 ## num of total icu counts
 y=df['num_icu'].dropna() # delete NaN entries
 x=df['date'][len(df['date'])-len(y):] # subarray of dates with num_icu available
-# plt.figure(figsize=(fig_width, fig_height))
+plt.figure(figsize=(fig_width, fig_height))
 plt.title('Number of ICU admissions')
-plt.plot(x, y, marker='.', markersize=12, color='tan', linewidth=2)
+plt.plot(x, y, marker='.', markersize=marker_size, color='tan', linewidth=line_width)
 bottom, top = plt.ylim()
 plt.ylim(0, top*1.1)
 #plt.xlabel('Date')
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
-    plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    #plt.text(i, j, str(int(j)), ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_icu_file_name)
 plt.clf()
@@ -113,15 +124,16 @@ plt.close()
 
 x=df['date']
 y=df['num_hospitalizations']
-# plt.figure(figsize=(fig_width, fig_height))
+plt.figure(figsize=(fig_width, fig_height))
 plt.title('Number of Hospitalizations in Ohio')
-plt.plot(x, y, marker='.', markersize=12, color='olive', linewidth=2)
+plt.plot(x, y, marker='.', markersize=marker_size, color='olive', linewidth=line_width)
 bottom, top = plt.ylim()  
 plt.ylim(0, top*1.1)
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
-    plt.text(i, j, str(j), ha='center', va='bottom')
+    #plt.text(i, j, str(j), ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_hospitalizations_file_name)
 plt.clf()
@@ -131,15 +143,16 @@ plt.close()
 
 x=df['date']
 y=df['num_death']
-# plt.figure(figsize=(fig_width, fig_height))
-plt.plot(x, y, marker='^', color='grey', linewidth=2)
+plt.figure(figsize=(fig_width, fig_height))
+plt.plot(x, y, marker='^', markersize=marker_size, color='grey', linewidth=line_width)
 plt.title('Number of Deaths')
 bottom, top = plt.ylim()  
 plt.ylim(0, top*1.1)     
-plt.xticks(rotation=rotation_degree)
+plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
-    plt.text(i, j, str(j), ha='center', va='bottom')
+    #plt.text(i, j, str(j), ha='center', va='bottom')
+    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_death_file_name)
 plt.clf()
