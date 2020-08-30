@@ -2431,6 +2431,22 @@
             "median_age": "42",
             "sex_males": "47%",
             "sex_females": "52%"
+        },
+        {
+            "date": "2020-08-30",
+            "timestamp_iso": "2020-08-30T14:01:08.101658-04:00",
+            "num_confirmed_cases": 115806,
+            "num_probable_cases": 6456,
+            "num_cases": 122262,
+            "num_hospitalizations": 13317,
+            "num_confirmed_death": 3844,
+            "num_probable_death": 284,
+            "num_death": 4128,
+            "num_icu": 2954,
+            "age_range": "<1-109",
+            "median_age": "42",
+            "sex_males": "47%",
+            "sex_females": "52%"
         }
     ]
 }
