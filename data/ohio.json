@@ -2735,6 +2735,22 @@
             "median_age": "40",
             "sex_males": "47%",
             "sex_females": "52%"
+        },
+        {
+            "date": "2020-09-18",
+            "timestamp_iso": "2020-09-18T14:01:07.192072-04:00",
+            "num_confirmed_cases": 134992,
+            "num_probable_cases": 7674,
+            "num_cases": 142596,
+            "num_hospitalizations": 14687,
+            "num_confirmed_death": 4312,
+            "num_probable_death": 296,
+            "num_death": 4608,
+            "num_icu": 3161,
+            "age_range": "<1-109",
+            "median_age": "40",
+            "sex_males": "47%",
+            "sex_females": "52%"
         }
     ]
 }
