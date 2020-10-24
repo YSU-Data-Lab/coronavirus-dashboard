@@ -3311,6 +3311,22 @@
             "median_age": "41",
             "sex_males": "47%",
             "sex_females": "52%"
+        },
+        {
+            "date": "2020-10-24",
+            "timestamp_iso": "2020-10-24T14:01:21.944422-04:00",
+            "num_confirmed_cases": 184528,
+            "num_probable_cases": 11278,
+            "num_cases": 195806,
+            "num_hospitalizations": 18006,
+            "num_confirmed_death": 4896,
+            "num_probable_death": 310,
+            "num_death": 5206,
+            "num_icu": 3705,
+            "age_range": "<1-109",
+            "median_age": "41",
+            "sex_males": "47%",
+            "sex_females": "52%"
         }
     ]
 }
