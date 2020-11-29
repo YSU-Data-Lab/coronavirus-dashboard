@@ -3871,6 +3871,22 @@
             "median_age": "42",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2020-11-29",
+            "timestamp_iso": "2020-11-29T14:01:24.627974-05:00",
+            "num_confirmed_cases": 392129,
+            "num_probable_cases": 22303,
+            "num_cases": 414432,
+            "num_hospitalizations": 26507,
+            "num_confirmed_death": 5979,
+            "num_probable_death": 420,
+            "num_death": 6399,
+            "num_icu": 4644,
+            "age_range": "<1-109",
+            "median_age": "42",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
