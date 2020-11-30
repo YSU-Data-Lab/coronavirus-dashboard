@@ -33,7 +33,12 @@ csv_summary_file_name_today_tmp=csv_summary_dir+'COVIDSummaryData_'+today_date+'
 csv_county_summary_file_name_today=csv_county_summary_dir+'csv_county_summary_'+today_date+'.csv'
 
 ##===detect if website update===
+
 csv_summary_today_tmp=requests.get(url, allow_redirects=True).content
+if "<html lang=\"en\">" in str(csv_summary_today_tmp):
+    print('URL of CSV today not available')
+    sys.exit(1)
+
 open(csv_summary_file_name_today_tmp, 'wb').write(csv_summary_today_tmp)
 
 if os.path.exists(csv_summary_file_name_yesterday):
