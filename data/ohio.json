@@ -4095,6 +4095,22 @@
             "median_age": "42",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2020-12-13",
+            "timestamp_iso": "2020-12-13T14:01:17.382462-05:00",
+            "num_confirmed_cases": 515991,
+            "num_probable_cases": 46736,
+            "num_cases": 562727,
+            "num_hospitalizations": 31973,
+            "num_confirmed_death": 6923,
+            "num_probable_death": 569,
+            "num_death": 7492,
+            "num_icu": 5171,
+            "age_range": "<1-111",
+            "median_age": "42",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
