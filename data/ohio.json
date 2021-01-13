@@ -4559,6 +4559,22 @@
             "median_age": "43",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-01-13",
+            "timestamp_iso": "2021-01-13T14:01:11.462077-05:00",
+            "num_confirmed_cases": 707885,
+            "num_probable_cases": 91754,
+            "num_cases": 799639,
+            "num_hospitalizations": 42151,
+            "num_confirmed_death": 8874,
+            "num_probable_death": 1007,
+            "num_death": 9881,
+            "num_icu": 6252,
+            "age_range": "<1-111",
+            "median_age": "43",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
