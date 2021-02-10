@@ -5007,6 +5007,22 @@
             "median_age": "42",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-02-10",
+            "timestamp_iso": "2021-02-10T14:01:09.107991-05:00",
+            "num_confirmed_cases": 803885,
+            "num_probable_cases": 124746,
+            "num_cases": 928631,
+            "num_hospitalizations": 48080,
+            "num_confirmed_death": 10522,
+            "num_probable_death": 1334,
+            "num_death": 11856,
+            "num_icu": 6889,
+            "age_range": "<1-112",
+            "median_age": "42",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
