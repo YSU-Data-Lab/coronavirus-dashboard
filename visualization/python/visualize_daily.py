@@ -157,6 +157,8 @@ plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     #plt.text(i, j, str(j), ha='center', va='bottom')
+    if np.isnan(j):
+        j=np.nan_to_num(j)
     plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
 plt.tight_layout()
 plt.savefig(num_death_file_name)
