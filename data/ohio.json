@@ -5808,6 +5808,19 @@
             "median_age": "42",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-04-09",
+            "timestamp_iso": "2021-04-09T14:01:07.942570-04:00",
+            "num_confirmed_cases": 874977,
+            "num_probable_cases": 160575,
+            "num_cases": 1035552,
+            "num_hospitalizations": 53960,
+            "num_icu": 7518,
+            "age_range": "<1-111",
+            "median_age": "42",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
