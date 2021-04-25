@@ -6016,6 +6016,19 @@
             "median_age": "42",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-04-25",
+            "timestamp_iso": "2021-04-25T14:01:08.583378-04:00",
+            "num_confirmed_cases": 895504,
+            "num_probable_cases": 168802,
+            "num_cases": 1064306,
+            "num_hospitalizations": 55685,
+            "num_icu": 7721,
+            "age_range": "<1-111",
+            "median_age": "42",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
