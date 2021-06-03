@@ -6497,6 +6497,19 @@
             "median_age": "41",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-06-03",
+            "timestamp_iso": "2021-06-03T14:01:08.714912-04:00",
+            "num_confirmed_cases": 923497,
+            "num_probable_cases": 179883,
+            "num_cases": 1103380,
+            "num_hospitalizations": 59412,
+            "num_icu": 8161,
+            "age_range": "<1-111",
+            "median_age": "41",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
