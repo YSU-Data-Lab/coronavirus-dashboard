@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import matplotlib.ticker as ticker
 
-
-
-
 data_file_name = '../../data/ohio.json'
 num_cases_file_name='../../figure/num_cases.svg'
 num_new_cases_file_name='../../figure/num_new_cases.svg'
@@ -31,8 +28,9 @@ df = pd.DataFrame(daily_entries)
 # plot parameters
 num_days=len(df['date'])
 fig_height=8
-fig_width=int(10*num_days/141) #lenght=15 and num_days=141 (08/10/20)
+fig_width=int(20*num_days/141) #lenght=15 and num_days=141 (08/10/20)
 value_text_size=5
+value_text_rotation_degree=45
 x_text_size=5
 rotation_degree=90
 marker_size=5
@@ -55,8 +53,9 @@ plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
     #plt.text(i, j, str(j), size=value_text_size, ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
-    #plt.text(i, j, str(j), ha='center', va='bottom')
+    #plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_cases_file_name)
 plt.clf()
@@ -77,7 +76,8 @@ plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x[1:],z[1:]):
     #plt.text(i, j, str(int(j)), ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_new_cases_file_name)
 plt.clf()
@@ -98,7 +98,8 @@ plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x[8:],z[8:]):
     #plt.text(i, j, str(int(j)), ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_new_avg_7d_cases_file_name)
 plt.clf()
@@ -119,7 +120,8 @@ plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     # plt.annotate(str(j),xy=(i,j))
     #plt.text(i, j, str(int(j)), ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_icu_file_name)
 plt.clf()
@@ -138,7 +140,8 @@ plt.xticks(fontsize=x_text_size, rotation=rotation_degree)
 plt.gca().yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
 for i,j in zip(x,y):
     #plt.text(i, j, str(j), ha='center', va='bottom')
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_hospitalizations_file_name)
 plt.clf()
@@ -159,7 +162,8 @@ for i,j in zip(x,y):
     #plt.text(i, j, str(j), ha='center', va='bottom')
     if np.isnan(j):
         j=np.nan_to_num(j)
-    plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    # plt.text(i, j, str(int(j)), size=value_text_size, ha='center', va='bottom')
+    plt.annotate(str(int(j)),xy=(i,j), size=value_text_size, ha='center', va='bottom', rotation=value_text_rotation_degree)
 plt.tight_layout()
 plt.savefig(num_death_file_name)
 plt.clf()
