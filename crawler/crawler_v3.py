@@ -82,12 +82,14 @@ for item in items1:
         daily['num_confirmed_cases']=int(value.replace(',', '').replace('*', ''))
     elif 'expanded case definition' in title.lower():
         daily['num_probable_cases']=int(value.replace(',', '').replace('*', ''))
-    elif 'total deaths' in title.lower():
+    elif 'deaths in state of ohio' in title.lower():
         daily['num_death']=int(value.replace(',', '').replace('*', ''))
-    elif 'confirmed deaths' in title.lower():
-        daily['num_confirmed_death']=int(value.replace(',', '').replace('*', ''))
-    elif 'expanded death definition' in title.lower():
-        daily['num_probable_death']=int(value.replace(',', '').replace('*', ''))
+    # elif 'total deaths' in title.lower():
+    #     daily['num_death']=int(value.replace(',', '').replace('*', ''))
+    # elif 'confirmed deaths' in title.lower():
+    #     daily['num_confirmed_death']=int(value.replace(',', '').replace('*', ''))
+    # elif 'expanded death definition' in title.lower():
+    #     daily['num_probable_death']=int(value.replace(',', '').replace('*', ''))
     elif 'icu admissions' in title.lower():
         daily['num_icu']=int(value.replace(',', '').replace('*', ''))
     elif 'hospitalizations' in title.lower():
