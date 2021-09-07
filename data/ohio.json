@@ -7822,6 +7822,20 @@
             "median_age": "40",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-09-07",
+            "timestamp_iso": "2021-09-07T14:01:08.270636-04:00",
+            "num_confirmed_cases": 1044584,
+            "num_probable_cases": 217434,
+            "num_cases": 1262018,
+            "num_hospitalizations": 66982,
+            "num_death": 21021,
+            "num_icu": 8967,
+            "age_range": "<1-111",
+            "median_age": "40",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
