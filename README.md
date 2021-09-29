@@ -12,7 +12,7 @@ Total confirmed cases:
 Newly confirmed cases:
 <img src="./figure/num_new_cases.svg" style="max-width: 100%" alt="Newly Confirmed Cases in Ohio"/>
 
-7-day Moving Average:
+7-Day Average Newly Confirmed Cases:
 <img src="./figure/num_new_avg_7d_cases.svg" style="max-width: 100%" alt="7-Day Average Newly Confirmed Cases in Ohio"/>  
 
 Number of ICU Admissions:
