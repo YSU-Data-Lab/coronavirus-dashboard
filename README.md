@@ -38,13 +38,13 @@ Number of Deaths:
 * Automatically update around 2pm daily.
 * Short URL: [https://bit.ly/covid-19-ohio](https://bit.ly/covid-19-ohio)
 * COVID-19 cases in Ohio datasets:
-  * [JSON](./data/ohio.json)
-  * [CSV](./data/ohio.csv)
-  * Data source: [coronavirus.ohio.gov](https://coronavirus.ohio.gov)
+    * [JSON](./data/ohio.json)
+    * [CSV](./data/ohio.csv)
+    * Data source: [coronavirus.ohio.gov](https://coronavirus.ohio.gov)
 * Help to contribute:
-  * [Project source code](https://github.com/YSU-Data-Lab/coronavirus-dashboard)
-  * [Submit a git issue or suggestion](https://github.com/YSU-Data-Lab/coronavirus-dashboard/issues)
+    * [Project source code](https://github.com/YSU-Data-Lab/coronavirus-dashboard)
+    * [Submit a git issue or suggestion](https://github.com/YSU-Data-Lab/coronavirus-dashboard/issues)
 * Thanks to:
-  * [Ohio Supercomputer Center](https://www.osc.edu/)
-  * [GitHub](https://github.com/)
+    * [Ohio Supercomputer Center](https://www.osc.edu/)
+    * [GitHub](https://github.com/)
 
