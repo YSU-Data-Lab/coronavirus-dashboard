@@ -3,7 +3,9 @@
 ## Daily Statistics
 
 <p class="figure">
-<img src="./figure/num_cases.svg" width="600px"  alt="Confirmed Cases in Ohio"/>  
+<!-- <img src="./figure/num_cases.svg" width="600px"  alt="Confirmed Cases in Ohio"/>   -->
+
+<img src="./figure/num_cases.svg" style="max-width: 100%"  alt="Confirmed Cases in Ohio"/>
 <img src="./figure/num_new_cases.svg" width="600px" alt="Newly Confirmed Cases in Ohio"/>  
 <img src="./figure/num_new_avg_7d_cases.svg" width="600px" alt="7-Day Average Newly Confirmed Cases in Ohio"/>  
 <img src="./figure/num_icu.svg" width="600px" alt="Number of ICU admissions"/>  
