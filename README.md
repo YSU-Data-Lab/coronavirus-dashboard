@@ -4,6 +4,8 @@ Website Short URL: [https://bit.ly/covid-19-ohio](https://bit.ly/covid-19-ohio)
 
 ## Daily Statistics in Ohio
 
+To view the original image: right click on the image and choose "Open Image in New Tab".
+
 <p class="figure">
 <!-- <img src="./figure/num_cases.svg" width="600px"  alt="Confirmed Cases in Ohio"/>   -->
 Total confirmed cases:
@@ -25,7 +27,7 @@ Number of Deaths:
 <img src="./figure/num_death.svg" style="max-width: 100%" alt="Number of Deaths"/>
 </p>
 
-(To view the original image: right click on a figure and choose "Open Image in New Tab")
+
 
 ## County Statistics
 
