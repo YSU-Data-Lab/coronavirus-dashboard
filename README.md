@@ -1,5 +1,7 @@
 % Coronavirus (COVID-19) Cases in Ohio Dashboard
 
+Website Short URL: [https://bit.ly/covid-19-ohio](https://bit.ly/covid-19-ohio)
+
 ## Daily Statistics in Ohio
 
 <p class="figure">
@@ -36,7 +38,6 @@ Number of Deaths:
 ## Project Information
 
 * Automatically update around 2pm daily.
-* Short URL: [https://bit.ly/covid-19-ohio](https://bit.ly/covid-19-ohio)
 * COVID-19 cases in Ohio datasets:
     * [JSON](./data/ohio.json)
     * [CSV](./data/ohio.csv)
