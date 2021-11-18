@@ -8830,6 +8830,20 @@
             "median_age": "39",
             "sex_males": "46%",
             "sex_females": "53%"
+        },
+        {
+            "date": "2021-11-18",
+            "timestamp_iso": "2021-11-18T14:01:08.253199-05:00",
+            "num_confirmed_cases": 1304684,
+            "num_probable_cases": 322367,
+            "num_cases": 1627051,
+            "num_hospitalizations": 83519,
+            "num_death": 25768,
+            "num_icu": 10503,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "46%",
+            "sex_females": "53%"
         }
     ]
 }
