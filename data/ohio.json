@@ -10104,6 +10104,20 @@
             "median_age": "38",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-02-21",
+            "timestamp_iso": "2022-02-21T14:01:09.375676-05:00",
+            "num_confirmed_cases": 2052480,
+            "num_probable_cases": 593199,
+            "num_cases": 2645679,
+            "num_hospitalizations": 111583,
+            "num_death": 35421,
+            "num_icu": 13135,
+            "age_range": "<1-111",
+            "median_age": "38",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
