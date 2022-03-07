@@ -10272,6 +10272,20 @@
             "median_age": "38",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-03-07",
+            "timestamp_iso": "2022-03-07T14:01:08.968996-05:00",
+            "num_confirmed_cases": 2062003,
+            "num_probable_cases": 597926,
+            "num_cases": 2659929,
+            "num_hospitalizations": 112867,
+            "num_death": 36990,
+            "num_icu": 13270,
+            "age_range": "<1-111",
+            "median_age": "38",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
