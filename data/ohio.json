@@ -11112,6 +11112,20 @@
             "median_age": "38",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-06-16",
+            "timestamp_iso": "2022-06-16T14:01:08.520322-04:00",
+            "num_confirmed_cases": 2164632,
+            "num_probable_cases": 650437,
+            "num_cases": 2815069,
+            "num_hospitalizations": 118289,
+            "num_death": 38560,
+            "num_icu": 13696,
+            "age_range": "<1-111",
+            "median_age": "38",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
