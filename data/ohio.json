@@ -11308,6 +11308,20 @@
             "median_age": "38",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-07-11",
+            "timestamp_iso": "2022-07-11T14:01:08.675465-04:00",
+            "num_confirmed_cases": 2200131,
+            "num_probable_cases": 667160,
+            "num_cases": 2867291,
+            "num_hospitalizations": 119650,
+            "num_death": 38819,
+            "num_icu": 13783,
+            "age_range": "<1-111",
+            "median_age": "38",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
