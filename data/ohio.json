@@ -11602,6 +11602,20 @@
             "median_age": "39",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-08-17",
+            "timestamp_iso": "2022-08-17T14:01:10.247036-04:00",
+            "num_confirmed_cases": 2294234,
+            "num_probable_cases": 707809,
+            "num_cases": 3002043,
+            "num_hospitalizations": 122882,
+            "num_death": 39113,
+            "num_icu": 13983,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
