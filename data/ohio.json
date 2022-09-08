@@ -11784,6 +11784,20 @@
             "median_age": "39",
             "sex_males": "45%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-09-08",
+            "timestamp_iso": "2022-09-08T14:01:08.932687-04:00",
+            "num_confirmed_cases": 2356514,
+            "num_probable_cases": 740043,
+            "num_cases": 3096557,
+            "num_hospitalizations": 125230,
+            "num_death": 39476,
+            "num_icu": 14131,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "45%",
+            "sex_females": "54%"
         }
     ]
 }
