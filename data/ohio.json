@@ -12554,6 +12554,20 @@
             "median_age": "39",
             "sex_males": "44%",
             "sex_females": "54%"
+        },
+        {
+            "date": "2022-12-15",
+            "timestamp_iso": "2022-12-15T14:01:15.899223-05:00",
+            "num_confirmed_cases": 2473151,
+            "num_probable_cases": 803479,
+            "num_cases": 3276630,
+            "num_hospitalizations": 132210,
+            "num_death": 40629,
+            "num_icu": 14634,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "44%",
+            "sex_females": "55%"
         }
     ]
 }
