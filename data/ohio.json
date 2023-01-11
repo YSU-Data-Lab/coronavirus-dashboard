@@ -12764,6 +12764,20 @@
             "median_age": "39",
             "sex_males": "44%",
             "sex_females": "55%"
+        },
+        {
+            "date": "2023-01-11",
+            "timestamp_iso": "2023-01-11T14:01:15.460095-05:00",
+            "num_confirmed_cases": 2503122,
+            "num_probable_cases": 818341,
+            "num_cases": 3321463,
+            "num_hospitalizations": 134193,
+            "num_death": 40917,
+            "num_icu": 14761,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "44%",
+            "sex_females": "55%"
         }
     ]
 }
