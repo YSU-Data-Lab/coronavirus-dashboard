@@ -13660,6 +13660,20 @@
             "median_age": "39",
             "sex_males": "44%",
             "sex_females": "55%"
+        },
+        {
+            "date": "2023-05-03",
+            "timestamp_iso": "2023-05-03T14:01:15.217942-04:00",
+            "num_confirmed_cases": 2574794,
+            "num_probable_cases": 863686,
+            "num_cases": 3438480,
+            "num_hospitalizations": 140281,
+            "num_death": 42051,
+            "num_icu": 15203,
+            "age_range": "<1-111",
+            "median_age": "39",
+            "sex_males": "44%",
+            "sex_females": "55%"
         }
     ]
 }
